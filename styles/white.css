@@ -1,0 +1,194 @@
+.interview {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/img/blur-background_mob.png");
+    background-size: contain;
+}
+
+.interview-modal {
+    width: 301px;
+    height: 308px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.35);
+    border-radius: 31px;
+    box-sizing: border-box;
+}
+
+.interview-modal__header {
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+
+}
+
+.interview-form__label {
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 39px;
+    color: #000000;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #E5E5E5;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: #EBBFDA;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.interview-modal__button {
+    font-family: 'Roboto', sans-serif;
+    align-self: flex-end;
+    font-size: 20px;
+    line-height: 33px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 720px) {
+    .interview {
+        background-image: url("../assets/img/blur-background_tablet.png");
+    }
+
+    .interview-modal {
+        width: 501px;
+        height: 506px;
+        margin: 100px;
+        padding: 55px;
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.35);
+        border-radius: 50px;
+    }
+
+    .interview-modal__header {
+        margin-bottom: 45px;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .interview-form__label {
+        margin-bottom: 45px;
+        font-size: 40px;
+        line-height: 65px;
+    }
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label {
+        padding-left: 50px;
+    }
+    [type="radio"]:checked + label:before,
+    [type="radio"]:not(:checked) + label:before {
+        width: 26px;
+        height: 26px;
+    }
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {
+        width: 21px;
+        height: 21px;
+        top: 4px;
+        left: 4px;
+    }
+
+    .interview-modal__button {
+        font-size: 35px;
+        line-height: 57px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .interview {
+        background-image: url("../assets/img/blur-background.png");
+    }
+
+    .interview-modal {
+        width: 910px;
+        height: 524px;
+        padding: 65px;
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.35);
+        border-radius: 50px;
+    }
+
+    .interview-modal__header {
+        margin-bottom: 55px;
+        font-size: 50px;
+        line-height: 59px;
+    }
+
+    .interview-form__label {
+        margin-bottom: 55px;
+        font-size: 50px;
+        line-height: 81px;
+    }
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label {
+        padding-left: 70px;
+    }
+    [type="radio"]:checked + label:before,
+    [type="radio"]:not(:checked) + label:before {
+        width: 29px;
+        height: 29px;
+    }
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {
+        width: 23px;
+        height: 23px;
+        top: 4px;
+        left: 4px;
+    }
+
+    .interview-modal__button {
+        font-size: 40px;
+        line-height: 65px;
+    }
+}
